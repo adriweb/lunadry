@@ -155,7 +155,7 @@ local function luafilter (...)
              K "if" * SPACE * V "whitespace" * V "_oneline_exp" * V "whitespace" * SPACE * K "then" * INDENT_INCREASE(V "filler" * V "block" * V "filler") * (INDENT * K "elseif" * SPACE * V "whitespace" * V "_oneline_exp" * V "whitespace" * SPACE * K "then" * INDENT_INCREASE(V "filler" * V "block" * V "filler"))^0 * (INDENT * K "else" * INDENT_INCREASE(V "filler" * V "block" * V "filler"))^-1 * INDENT * K "end" + --
              K "for" * SPACE * V "whitespace" * V "Name" * V "whitespace" * SPACE * C "=" * SPACE * V "whitespace" * V "_oneline_exp" * V "whitespace" * C "," * SPACE * V "whitespace" * V "_oneline_exp" * (V "whitespace" * C "," * SPACE * V "whitespace" * V "_oneline_exp")^-1 * V "whitespace" * SPACE * K "do" * INDENT_INCREASE(V "filler" * V "block" * V "filler") * INDENT * K "end" + --
              K "for" * SPACE * V "whitespace" * V "namelist" * V "whitespace" * SPACE * K "in" * SPACE * V "whitespace" * V "explist" * V "whitespace" * SPACE * K "do" * INDENT_INCREASE(V "filler" * V "block" * V "filler") * INDENT * K "end" + --
-             K "function" * SPACE * V "whitespace" * V "funcname" * SPACE * V "whitespace" * V "funcbody" + --
+             K "function" * SPACE * V "whitespace" * V "funcname"  * V "whitespace" * V "funcbody" + --
              K "local" * SPACE * V "whitespace" * K "function" * SPACE * V "whitespace" * V "Name" * V "whitespace" * SPACE * V "funcbody" + --
              K "local" * SPACE * V "whitespace" * V "namelist" * (SPACE * V "whitespace" * C "=" * SPACE * V "whitespace" * V "explist")^-1 * V "_check_ambiguous" + --
              V "_function_declaration" + --
